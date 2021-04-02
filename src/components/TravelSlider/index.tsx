@@ -1,4 +1,5 @@
-import { Box } from '@chakra-ui/react'
+import { Box, Icon, IconButton } from '@chakra-ui/react'
+import { RiArrowRightSLine } from 'react-icons/ri'
 import SwiperCore, { Navigation, Pagination, Scrollbar } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/swiper-bundle.css'
@@ -19,6 +20,7 @@ export function TravelSlider() {
 			>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="america-do-norte"
 						title="América do norte"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="https://images.unsplash.com/photo-1558935475-8b5919e5d70a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80"
@@ -26,6 +28,7 @@ export function TravelSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="america-do-sul"
 						title="América do sul"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="https://images.unsplash.com/photo-1593985437133-03d5e1435c03?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=891&q=80"
@@ -33,6 +36,7 @@ export function TravelSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="asia"
 						title="Ásia"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="https://l3wca310lzh353h1q1361q1c9h-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/bigstock-Shanghai-Skyline-Panoramic-resize-1200.jpg"
@@ -40,6 +44,7 @@ export function TravelSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="africa"
 						title="África"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="https://c.wallhere.com/photos/a7/57/1920x1080_px_Africa_clouds_Desert_landscape_mountain_Namibia_nature-1104205.jpg!d"
@@ -47,6 +52,7 @@ export function TravelSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="europa"
 						title="Europa"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="/png/europe.png"
@@ -54,6 +60,7 @@ export function TravelSlider() {
 				</SwiperSlide>
 				<SwiperSlide>
 					<SlideContent
+						destinationUrl="oceania"
 						title="Oceania"
 						description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 						imageUrl="https://www.carrementbelle.com/blog/wp-content/uploads/2020/07/perfume-oceania.jpg"

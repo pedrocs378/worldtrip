@@ -1,6 +1,5 @@
 import Head from "next/head";
-import { Box, Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
-
+import { Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
 
 import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
