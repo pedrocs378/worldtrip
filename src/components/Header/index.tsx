@@ -13,6 +13,7 @@ export function Header() {
 		>
 			<Image
 				src="/svg/logo.svg"
+				alt="worldtrip"
 				maxW={184}
 				mx="auto"
 			/>

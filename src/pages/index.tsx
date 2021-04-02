@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
 
 import { Header } from "../components/Header";
 
@@ -10,7 +10,7 @@ export default function Home() {
         <title>worldtrip</title>
       </Head>
 
-      <Flex direction="column" h="100vh" w="100vw">
+      <Flex direction="column">
         <Header />
 
         <Flex
@@ -19,6 +19,8 @@ export default function Home() {
         >
           <Image
             src="/svg/banner.svg"
+            alt="Airplane"
+            mx="auto"
             h="100%"
             position="absolute"
             right="0"
@@ -29,7 +31,7 @@ export default function Home() {
           />
           <Flex
             mx="auto"
-            maxW="1120px"
+            maxW="1480px"
             align="center"
             justify="space-between"
             zIndex="1"
@@ -42,7 +44,7 @@ export default function Home() {
                 fontWeight="medium"
               >
                 5 Continentes, <br /> infinitas possibilidades.
-              </Text>
+                </Text>
               <Text
                 color="gray.100"
                 fontWeight="normal"
@@ -50,7 +52,7 @@ export default function Home() {
                 maxW="480px"
               >
                 Chegou a hora de tirar do papel a viagem que você sempre sonhou.
-              </Text>
+                </Text>
             </Stack>
             <Image
               src="/svg/airplane.svg"
@@ -58,6 +60,81 @@ export default function Home() {
               mb={-120}
             />
           </Flex>
+        </Flex>
+
+        <Flex w="100%" maxW="1480" mx="auto" mt="20" flexDirection="column">
+          <Stack
+            flex="1"
+            direction="row"
+            justify="space-between"
+            px="8"
+          >
+            <Stack display="flex" spacing="6" align="center">
+              <Image
+                src="/svg/cocktail.svg"
+                alt="cocktail"
+                h={85}
+                w={85}
+              />
+              <Text fontWeight="semibold" fontSize="lg">vida noturna</Text>
+            </Stack>
+            <Stack display="flex" spacing="6" align="center">
+              <Image
+                src="/svg/surf.svg"
+                alt="surf"
+                h={85}
+                w={85}
+              />
+              <Text fontWeight="semibold" fontSize="lg">praia</Text>
+            </Stack>
+            <Stack display="flex" spacing="6" align="center">
+              <Image
+                src="/svg/building.svg"
+                alt="building"
+                h={85}
+                w={85}
+              />
+              <Text fontWeight="semibold" fontSize="lg">moderno</Text>
+            </Stack>
+            <Stack display="flex" spacing="6" align="center">
+              <Image
+                src="/svg/museum.svg"
+                alt="museum"
+                h={85}
+                w={85}
+              />
+              <Text fontWeight="semibold" fontSize="lg">clássico</Text>
+            </Stack>
+            <Stack display="flex" spacing="6" align="center">
+              <Image
+                src="/svg/earth.svg"
+                alt="earth"
+                h={85}
+                w={85}
+              />
+              <Text fontWeight="semibold" fontSize="lg">e mais...</Text>
+            </Stack>
+          </Stack>
+
+          <Divider
+            mt="20"
+            w="20"
+            colorScheme="whiteAlpha"
+            borderWidth={2}
+            borderRadius={4}
+            variant="solid"
+            mx="auto"
+          />
+
+          <Text
+            my="13"
+            mx="auto"
+            textAlign="center"
+            fontWeight="medium"
+            fontSize="2xl"
+          >
+            Vamos nessa? <br /> Então escolha seu continente
+          </Text>
         </Flex>
       </Flex>
     </>
