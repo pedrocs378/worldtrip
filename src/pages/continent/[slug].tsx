@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
 
 import { Header } from "../../components/Header";
+import { CitiesMostVisited } from "../../components/CitiesMostVisited";
 
 export default function Continent() {
 
@@ -48,10 +49,10 @@ export default function Continent() {
 				</Box>
 
 				<Flex direction="column" w="100%" maxW="1120px" p="6" mx="auto">
-					<Flex align="center" justify="space-between" my="20">
+					<Flex as="section" align="center" justify="space-between" my="20">
 						<Text
 							fontWeight="normal"
-							fontSize="md"
+							fontSize="lg"
 							color="gray.700"
 							maxW="500px"
 							textAlign="justify"
@@ -66,7 +67,7 @@ export default function Continent() {
 							<Stack spacing="1">
 								<Text
 									fontWeight="semibold"
-									fontSize="3xl"
+									fontSize="4xl"
 									color="yellow.900"
 									textAlign="center"
 								>
@@ -83,7 +84,7 @@ export default function Continent() {
 							<Stack>
 								<Text
 									fontWeight="semibold"
-									fontSize="3xl"
+									fontSize="4xl"
 									color="yellow.900"
 									textAlign="center"
 								>
@@ -100,7 +101,7 @@ export default function Continent() {
 							<Stack>
 								<Text
 									fontWeight="semibold"
-									fontSize="3xl"
+									fontSize="4xl"
 									color="yellow.900"
 									textAlign="center"
 								>
@@ -117,6 +118,17 @@ export default function Continent() {
 						</Stack>
 					</Flex>
 
+					<Box as="section">
+						<Text
+							color="gray.700"
+							fontSize="3xl"
+							fontWeight="medium"
+						>
+							Cidades +100
+						</Text>
+
+						<CitiesMostVisited />
+					</Box>
 				</Flex>
 			</Flex>
 		</>
