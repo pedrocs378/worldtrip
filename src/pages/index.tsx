@@ -1,8 +1,10 @@
 import Head from "next/head";
 import { Box, Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
 
+
 import { Header } from "../components/Header";
 import { TravelType } from "../components/TravelType";
+import { TravelSlider } from "../components/TravelSlider";
 
 export default function Home() {
   return (
@@ -78,7 +80,7 @@ export default function Home() {
           </Stack>
 
           <Divider
-            mt="20"
+            my="20"
             w="20"
             colorScheme="whiteAlpha"
             borderWidth={2}
@@ -88,7 +90,6 @@ export default function Home() {
           />
 
           <Text
-            my="13"
             mx="auto"
             textAlign="center"
             fontWeight="medium"
@@ -96,6 +97,8 @@ export default function Home() {
           >
             Vamos nessa? <br /> Então escolha seu continente
           </Text>
+
+          <TravelSlider />
         </Flex>
       </Flex>
     </>
