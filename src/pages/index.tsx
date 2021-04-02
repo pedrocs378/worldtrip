@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Box, Divider, Flex, Image, Stack, Text } from "@chakra-ui/react";
 
 import { Header } from "../components/Header";
+import { TravelType } from "../components/TravelType";
 
 export default function Home() {
   return (
@@ -69,51 +70,11 @@ export default function Home() {
             justify="space-between"
             px="8"
           >
-            <Stack display="flex" spacing="6" align="center">
-              <Image
-                src="/svg/cocktail.svg"
-                alt="cocktail"
-                h={85}
-                w={85}
-              />
-              <Text fontWeight="semibold" fontSize="lg">vida noturna</Text>
-            </Stack>
-            <Stack display="flex" spacing="6" align="center">
-              <Image
-                src="/svg/surf.svg"
-                alt="surf"
-                h={85}
-                w={85}
-              />
-              <Text fontWeight="semibold" fontSize="lg">praia</Text>
-            </Stack>
-            <Stack display="flex" spacing="6" align="center">
-              <Image
-                src="/svg/building.svg"
-                alt="building"
-                h={85}
-                w={85}
-              />
-              <Text fontWeight="semibold" fontSize="lg">moderno</Text>
-            </Stack>
-            <Stack display="flex" spacing="6" align="center">
-              <Image
-                src="/svg/museum.svg"
-                alt="museum"
-                h={85}
-                w={85}
-              />
-              <Text fontWeight="semibold" fontSize="lg">clássico</Text>
-            </Stack>
-            <Stack display="flex" spacing="6" align="center">
-              <Image
-                src="/svg/earth.svg"
-                alt="earth"
-                h={85}
-                w={85}
-              />
-              <Text fontWeight="semibold" fontSize="lg">e mais...</Text>
-            </Stack>
+            <TravelType title="vida noturna" image="cocktail" />
+            <TravelType title="praia" image="surf" />
+            <TravelType title="moderno" image="building" />
+            <TravelType title="clássico" image="museum" />
+            <TravelType title="e mais..." image="earth" />
           </Stack>
 
           <Divider
