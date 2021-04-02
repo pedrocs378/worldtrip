@@ -6,6 +6,7 @@ import { TravelType } from "../components/TravelType";
 import { TravelSlider } from "../components/TravelSlider";
 
 export default function Home() {
+
   return (
     <>
       <Head>
@@ -16,24 +17,27 @@ export default function Home() {
         <Header />
 
         <Flex
-          h={335}
+          h="335px"
+          w="100%"
+          maxW="1440px"
+          mx="auto"
           position="relative"
         >
           <Image
             src="/svg/banner.svg"
             alt="Airplane"
-            mx="auto"
             h="100%"
             position="absolute"
             right="0"
             left="0"
             top="0"
             bottom="0"
-            zIndex="0"
           />
           <Flex
             mx="auto"
-            maxW="1480px"
+            maxW="1160px"
+            width="100%"
+            px="8"
             align="center"
             justify="space-between"
             zIndex="1"
@@ -59,12 +63,12 @@ export default function Home() {
             <Image
               src="/svg/airplane.svg"
               maxW={["2xl", "4xl"]}
-              mb={-120}
+              mb="-80px"
             />
           </Flex>
         </Flex>
 
-        <Flex w="100%" maxW="1480" mx="auto" mt="20" flexDirection="column">
+        <Flex w="100%" maxW="1160px" mx="auto" mt="20" flexDirection="column">
           <Stack
             flex="1"
             direction="row"

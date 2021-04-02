@@ -1,15 +1,59 @@
+import { useMemo } from "react";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import { Box, Flex, HStack, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import axios from 'axios'
 
 import { Header } from "../../components/Header";
-import { CitiesMostVisited } from "../../components/CitiesMostVisited";
+import { CitiesOfTopCentury } from "../../components/CitiesOfTopCentury";
 
-export default function Continent() {
+interface ContinentCity {
+	id: number
+	name: string
+	country: string
+}
+
+interface ContinentCitiesOfTopCenturyData {
+	total: number
+	cities: ContinentCity[]
+}
+
+interface ContinentAboutData {
+	longDescription: string
+	countries: number
+	languages: number
+	citiesOfTopCentury: ContinentCitiesOfTopCenturyData
+}
+
+interface ContinentData {
+	id: number
+	slug: string
+	name: string
+	about: ContinentAboutData
+}
+
+interface ContinentProps {
+	continent: ContinentData
+}
+
+export default function Continent({ continent }: ContinentProps) {
+
+	const totalCountries = useMemo(() => {
+		return continent.about.countries.toString().padStart(2, '0')
+	}, [continent.about.countries])
+
+	const totalLanguages = useMemo(() => {
+		return continent.about.languages.toString().padStart(2, '0')
+	}, [continent.about.languages])
+
+	const totalCitiesOfTopCentury = useMemo(() => {
+		return continent.about.citiesOfTopCentury.total.toString().padStart(2, '0')
+	}, [continent.about.countries])
 
 	return (
 		<>
 			<Head>
-				<title>Europa | worldtrip</title>
+				<title>{continent.name} | worldtrip</title>
 			</Head>
 
 			<Flex direction="column">
@@ -43,7 +87,7 @@ export default function Continent() {
 							fontSize="3xl"
 							color="gray.50"
 						>
-							Europa
+							{continent.name}
 						</Text>
 					</Box>
 				</Box>
@@ -57,11 +101,7 @@ export default function Continent() {
 							maxW="500px"
 							textAlign="justify"
 						>
-							A Europa é, por convenção, um dos seis continentes do mundo.
-							Compreendendo a península ocidental da Eurásia, a
-							Europa geralmente divide-se da Ásia a leste pela divisória de
-							águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso,
-							e o mar Negro a sudeste.
+							{continent.about.longDescription}
 						</Text>
 						<Stack spacing="10" direction="row" align="center">
 							<Stack spacing="1">
@@ -71,7 +111,7 @@ export default function Continent() {
 									color="yellow.900"
 									textAlign="center"
 								>
-									50
+									{totalCountries}
 								</Text>
 								<Text
 									fontWeight="semibold"
@@ -88,7 +128,7 @@ export default function Continent() {
 									color="yellow.900"
 									textAlign="center"
 								>
-									60
+									{totalLanguages}
 								</Text>
 								<Text
 									fontWeight="semibold"
@@ -105,7 +145,7 @@ export default function Continent() {
 									color="yellow.900"
 									textAlign="center"
 								>
-									27
+									{totalCitiesOfTopCentury}
 								</Text>
 								<Text
 									fontWeight="semibold"
@@ -127,10 +167,32 @@ export default function Continent() {
 							Cidades +100
 						</Text>
 
-						<CitiesMostVisited />
+						<CitiesOfTopCentury
+							cities={continent.about.citiesOfTopCentury.cities}
+						/>
 					</Box>
 				</Flex>
 			</Flex>
 		</>
 	)
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+	return {
+		paths: [],
+		fallback: 'blocking'
+	}
+}
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+	const { slug } = params
+
+	const response = await axios.get(`http://localhost:3000/api/continents/${slug}`)
+
+	return {
+		props: {
+			continent: response.data
+		},
+		revalidate: 1
+	}
 }

@@ -1,0 +1,254 @@
+[
+	{
+		"id": 1,
+		"slug": "north-america",
+		"name": "América do norte",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+		"landscape_cover_url": "https://images.unsplash.com/photo-1558935475-8b5919e5d70a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=889&q=80",
+		"about": {
+			"longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla auctor condimentum consequat. In vitae imperdiet diam, at congue risus. Sed non eros a ante gravida cursus sit amet vel magna.",
+			"countries": 3,
+			"languages": 256,
+			"citiesOfTopCentury": {
+				"total": 1,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	},
+	{
+		"id": 2,
+		"slug": "south-america",
+		"name": "América do sul",
+		"description": "Suspendisse pretium iaculis sem. Suspendisse at bibendum tellus.",
+		"landscape_cover_url": "https://images.unsplash.com/photo-1593985437133-03d5e1435c03?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=891&q=80",
+		"about": {
+			"longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis, elit quis facilisis porta, urna justo convallis magna, ac mattis diam risus non ipsum. Sed non ipsum vel lectus mattis dignissim vel ut felis. Morbi auctor mi ac magna laoreet.",
+			"countries": 12,
+			"languages": 456,
+			"citiesOfTopCentury": {
+				"total": 5,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	},
+	{
+		"id": 3,
+		"slug": "asia",
+		"name": "Ásia",
+		"description": "Etiam vitae nisl imperdiet, pellentesque tellus et, sodales sem. Donec semper aliquet nibh, quis dictum libero semper a.",
+		"landscape_cover_url": "https://l3wca310lzh353h1q1361q1c9h-wpengine.netdna-ssl.com/wp-content/uploads/2015/09/bigstock-Shanghai-Skyline-Panoramic-resize-1200.jpg",
+		"about": {
+			"longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis, elit quis facilisis porta, urna justo convallis magna, ac mattis diam risus non ipsum. Sed non ipsum vel lectus mattis dignissim vel ut felis. Morbi auctor mi ac magna laoreet.",
+			"countries": 51,
+			"languages": 2301,
+			"citiesOfTopCentury": {
+				"total": 27,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	},
+	{
+		"id": 4,
+		"slug": "africa",
+		"name": "África",
+		"description": "Praesent ut tellus sed massa volutpat maximus a at mauris.",
+		"landscape_cover_url": "https://c.wallhere.com/photos/a7/57/1920x1080_px_Africa_clouds_Desert_landscape_mountain_Namibia_nature-1104205.jpg!d",
+		"about": {
+			"longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis, elit quis facilisis porta, urna justo convallis magna, ac mattis diam risus non ipsum. Sed non ipsum vel lectus mattis dignissim vel ut felis. Morbi auctor mi ac magna laoreet.",
+			"countries": 54,
+			"languages": 11,
+			"citiesOfTopCentury": {
+				"total": 27,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	},
+	{
+		"id": 5,
+		"slug": "europe",
+		"name": "Europa",
+		"description": "Cras accumsan velit id lectus tristique, tempor porttitor metus accumsan.",
+		"landscape_cover_url": "/png/europe.png",
+		"about": {
+			"longDescription": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+			"countries": 50,
+			"languages": 24,
+			"citiesOfTopCentury": {
+				"total": 27,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	},
+	{
+		"id": 6,
+		"slug": "oceania",
+		"name": "Oceania",
+		"description": "Proin fringilla consequat ultricies. Sed lacinia eros vitae porta semper.",
+		"landscape_cover_url": "https://www.carrementbelle.com/blog/wp-content/uploads/2020/07/perfume-oceania.jpg",
+		"about": {
+			"longDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sagittis, elit quis facilisis porta, urna justo convallis magna, ac mattis diam risus non ipsum. Sed non ipsum vel lectus mattis dignissim vel ut felis. Morbi auctor mi ac magna laoreet.",
+			"countries": 14,
+			"languages": 19,
+			"citiesOfTopCentury": {
+				"total": 27,
+				"cities": [
+					{
+						"id": 1,
+						"name": "Londres",
+						"country": "Reino Unido"
+					},
+					{
+						"id": 2,
+						"name": "Paris",
+						"country": "França"
+					},
+					{
+						"id": 3,
+						"name": "Roma",
+						"country": "Praga"
+					},
+					{
+						"id": 4,
+						"name": "Praga",
+						"country": "República Tcheca"
+					},
+					{
+						"id": 5,
+						"name": "Amsterdã",
+						"country": "Holanda"
+					}
+				]
+			}
+		}
+	}
+]

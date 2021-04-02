@@ -1,4 +1,4 @@
-import { Button, Image, Stack, Text, Link as ChakraLink } from "@chakra-ui/react";
+import { Button, Image, Stack, Text } from "@chakra-ui/react";
 import Link from 'next/link'
 
 interface SlideContentProps {
@@ -18,7 +18,7 @@ export function SlideContent({ destinationUrl, title, description, imageUrl }: S
 					alt={title}
 					h="100%"
 					w="100%"
-					filter="brightness(0.5)"
+					filter="brightness(0.6)"
 				/>
 				<Stack
 					spacing="4"
