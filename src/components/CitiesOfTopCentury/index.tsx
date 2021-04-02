@@ -6,6 +6,7 @@ interface City {
 	id: number
 	name: string
 	country: string
+	flag_url: string
 }
 
 interface CitiesOfTopCenturyProps {
@@ -23,7 +24,7 @@ export function CitiesOfTopCentury({ cities }: CitiesOfTopCenturyProps) {
 						image="londonCard"
 						name={city.name}
 						country={city.country}
-						flag="londonFlag"
+						flag={city.flag_url}
 					/>
 				)
 			})}

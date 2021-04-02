@@ -11,6 +11,7 @@ interface ContinentCity {
 	id: number
 	name: string
 	country: string
+	flag_url: string
 }
 
 interface ContinentCitiesOfTopCenturyData {

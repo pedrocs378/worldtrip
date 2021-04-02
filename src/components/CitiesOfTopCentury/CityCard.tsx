@@ -55,10 +55,11 @@ export function CityCard({ name, country, flag, image }: CityCardProps) {
 					</Text>
 				</Stack>
 				<Image
-					alt={flag}
-					src={`/png/${flag}.png`}
+					alt={country}
+					src={flag}
 					h="30px"
 					w="30px"
+					borderRadius="15px"
 				/>
 			</Flex>
 		</Box>
