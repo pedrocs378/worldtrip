@@ -2,20 +2,33 @@ import { Image, Stack, Text } from "@chakra-ui/react";
 
 interface TravelTypeProps {
 	title: string
-	image: string
+	imageSrc?: string
 }
 
-export function TravelType({ title, image }: TravelTypeProps) {
+export function TravelType({ title, imageSrc = null }: TravelTypeProps) {
 
-	return (
-		<Stack display="flex" spacing="6" align="center">
-			<Image
-				src={`/svg/${image}.svg`}
-				alt={image}
-				h={85}
-				w={85}
-			/>
-			<Text fontWeight="semibold" fontSize="lg">{title}</Text>
-		</Stack>
-	)
+	if (imageSrc) {
+		return (
+			<Stack
+				spacing="6"
+				align="center"
+			>
+				<Image
+					src={imageSrc}
+					alt={title}
+					h={85}
+					w={85}
+				/>
+				<Text fontWeight={["medium", "medium", "semibold"]} fontSize={["md", "md", "lg"]}>
+					{title}
+				</Text>
+			</Stack>
+		)
+	} else {
+		return (
+			<Text fontWeight={["medium", "medium", "semibold"]} fontSize={["md", "md", "lg"]}>
+				{title}
+			</Text>
+		)
+	}
 }

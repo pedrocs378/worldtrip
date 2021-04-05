@@ -13,7 +13,13 @@ export function TravelSlider() {
 	const continents = useContinents()
 
 	return (
-		<Box mx="auto" mb="40px" mt="52px" w="100%" h="450px">
+		<Box
+			mx="auto"
+			mb="10"
+			mt="52px"
+			w="100%"
+			h="450px"
+		>
 			<Swiper
 				slidesPerView={1}
 				navigation

@@ -12,7 +12,7 @@ export function SlideContent({ destinationUrl, title, description, imageUrl }: S
 
 	return (
 		<Link href={`/continent/${destinationUrl}`} passHref>
-			<Button p="0" as="a" h="450px" w="100%" position="relative">
+			<Button as="a" p="0" h="450px" w="100%" position="relative">
 				<Image
 					src={imageUrl}
 					alt={title}
@@ -28,9 +28,9 @@ export function SlideContent({ destinationUrl, title, description, imageUrl }: S
 					transform="translate(-50%, -50%)"
 				>
 					<Text
+						as="strong"
 						color="gray.50"
-						fontWeight="bold"
-						fontSize="3xl"
+						fontSize={["2xl", "2xl", "3xl"]}
 						textAlign="center"
 					>
 						{title}
@@ -38,7 +38,8 @@ export function SlideContent({ destinationUrl, title, description, imageUrl }: S
 					<Text
 						color="gray.100"
 						fontWeight="bold"
-						fontSize="lg"
+						fontSize={["sm", "sm", "lg"]}
+						display="flex"
 					>
 						{description}
 					</Text>

@@ -20,7 +20,7 @@ export function Header() {
 			as="header"
 			w="100%"
 			maxW="1120px"
-			h="20"
+			h={["12", "12", "20"]}
 			mx="auto"
 			px="6"
 			align="center"
@@ -28,16 +28,22 @@ export function Header() {
 			{showBackButton && (
 				<IconButton
 					aria-label="Arrow left"
-					icon={<Icon as={FiChevronLeft} color="gray.700" h="32px" w="32px" />}
+					icon={<Icon
+						as={FiChevronLeft}
+						color="gray.700"
+						h={["5", "5", "8"]}
+						w={["5", "5", "8"]}
+					/>}
 					onClick={back}
 					bg="transparent"
 					_hover={{ color: 'gray.700' }}
+					_active={{ background: 'transparent' }}
 				/>
 			)}
 			<Image
 				src="/svg/logo.svg"
 				alt="worldtrip"
-				maxW={184}
+				maxW={[90, 90, 184]}
 				mx="auto"
 			/>
 		</Flex>

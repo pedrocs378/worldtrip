@@ -4,20 +4,20 @@ interface CityCardProps {
 	name: string
 	country: string
 	flag: string
-	image: string
+	imageSrc: string
 }
 
-export function CityCard({ name, country, flag, image }: CityCardProps) {
+export function CityCard({ name, country, flag, imageSrc }: CityCardProps) {
 
 	return (
 		<Box
 			h="279px"
 			w="256px"
-			mb="12"
+			mb={["5", "5", "12"]}
 		>
 			<Image
-				src={`/png/${image}.png`}
-				alt={image}
+				src={imageSrc}
+				alt={name}
 				w="100%"
 				h="60%"
 				borderTopLeftRadius="4px"

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
-import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, useBreakpointValue } from "@chakra-ui/react";
 import axios from 'axios'
 
 import { Header } from "../../components/Header";
@@ -38,6 +38,10 @@ interface ContinentProps {
 }
 
 export default function Continent({ continent }: ContinentProps) {
+	const isWideVersion = useBreakpointValue({
+		base: false,
+		lg: true
+	})
 
 	const totalCountries = useMemo(() => {
 		return continent.about.countries.toString().padStart(2, '0')
@@ -60,7 +64,13 @@ export default function Continent({ continent }: ContinentProps) {
 			<Flex direction="column">
 				<Header />
 
-				<Box w="100%" maxW="1440px" mx="auto" position="relative" h={500}>
+				<Box
+					h={[150, 150, 500]}
+					w="100%"
+					maxW="1440px"
+					mx="auto"
+					position="relative"
+				>
 					<Image
 						position="absolute"
 						src="/png/europeBackground.png"
@@ -73,84 +83,112 @@ export default function Continent({ continent }: ContinentProps) {
 						zIndex="0"
 						filter="brightness(0.7)"
 					/>
-					<Box
-						position="absolute"
-						bottom="60px"
-						left="50%"
-						transform="translateX(-50%)"
-						w="100%"
-						maxW="1120px"
-						px="6"
-					>
+					{isWideVersion ? (
+						<Box
+							position="absolute"
+							bottom="60px"
+							left="50%"
+							transform="translateX(-50%)"
+							w="100%"
+							maxW="1120px"
+							px="6"
+						>
+							<Text
+								as="h1"
+								fontWeight="semibold"
+								fontSize="3xl"
+								color="gray.50"
+							>
+								{continent.name}
+							</Text>
+						</Box>
+					) : (
 						<Text
 							as="h1"
+							position="absolute"
+							left="50%"
+							top="50%"
+							transform="translate(-50%, -50%)"
 							fontWeight="semibold"
-							fontSize="3xl"
+							fontSize={["2xl", "2xl", "3xl"]}
 							color="gray.50"
 						>
 							{continent.name}
 						</Text>
-					</Box>
+					)}
 				</Box>
 
-				<Flex direction="column" w="100%" maxW="1120px" p="6" mx="auto">
-					<Flex as="section" align="center" justify="space-between" my="20">
+				<Flex direction="column" w="100%" maxW="1120px" p="4" mx="auto">
+					<Flex
+						as="section"
+						flexDirection={["column", "column", "row"]}
+						align="center"
+						justifyContent={["center", "center", "space-between"]}
+						my={["6", "6", "20"]}
+					>
 						<Text
 							fontWeight="normal"
-							fontSize="lg"
+							fontSize={["md", "md", "lg"]}
 							color="gray.700"
-							maxW="500px"
+							maxW={["100%", "100%", "500px"]}
 							textAlign="justify"
 						>
 							{continent.about.longDescription}
 						</Text>
-						<Stack spacing="10" direction="row" align="center">
-							<Stack spacing="1">
+						<Stack
+							spacing={["0", "0", "10"]}
+							mt={["4", "4", "0"]}
+							w={!isWideVersion && "100%"}
+							direction="row"
+							align="center"
+							justify={["space-between", "space-between", "normal"]}
+						>
+							<Stack px="1">
 								<Text
 									fontWeight="semibold"
-									fontSize="4xl"
+									fontSize={["3xl", "3xl", "4xl"]}
 									color="yellow.900"
-									textAlign="center"
+									textAlign={["left", "left", "center"]}
 								>
 									{totalCountries}
 								</Text>
 								<Text
-									fontWeight="semibold"
-									fontSize="lg"
+									fontWeight={["normal", "normal", "semibold"]}
+									fontSize={["md", "md", "lg"]}
 									color="gray.700"
 								>
 									países
 								</Text>
 							</Stack>
-							<Stack>
+							<Stack px="1">
 								<Text
 									fontWeight="semibold"
-									fontSize="4xl"
+									fontSize={["3xl", "3xl", "4xl"]}
 									color="yellow.900"
-									textAlign="center"
+									textAlign={["left", "left", "center"]}
 								>
 									{totalLanguages}
 								</Text>
 								<Text
-									fontWeight="semibold"
-									fontSize="lg"
+									fontWeight={["normal", "normal", "semibold"]}
+									fontSize={["md", "md", "lg"]}
 									color="gray.700"
 								>
 									línguas
 								</Text>
 							</Stack>
-							<Stack>
+							<Stack px="1">
 								<Text
 									fontWeight="semibold"
-									fontSize="4xl"
+									fontSize={["3xl", "3xl", "4xl"]}
 									color="yellow.900"
-									textAlign="center"
+									textAlign={["left", "left", "center"]}
 								>
 									{totalCitiesOfTopCentury}
 								</Text>
 								<Text
-									fontWeight="semibold"
-									fontSize="lg"
+									fontWeight={["normal", "normal", "semibold"]}
+									fontSize={["md", "md", "lg"]}
 									color="gray.700"
 								>
 									cidades +100
@@ -162,7 +200,7 @@ export default function Continent({ continent }: ContinentProps) {
 					<Box as="section">
 						<Text
 							color="gray.700"
-							fontSize="3xl"
+							fontSize={["2xl", "2xl", "3xl"]}
 							fontWeight="medium"
 						>
 							Cidades +100

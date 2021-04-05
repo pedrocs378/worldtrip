@@ -16,12 +16,17 @@ interface CitiesOfTopCenturyProps {
 export function CitiesOfTopCentury({ cities }: CitiesOfTopCenturyProps) {
 
 	return (
-		<Flex mt="10" align="center" justify="space-between" flexWrap="wrap">
+		<Flex
+			mt={["5", "5", "10"]}
+			align="center"
+			justify={["center", "center", "space-between"]}
+			flexWrap="wrap"
+		>
 			{cities.map(city => {
 				return (
 					<CityCard
 						key={city.id}
-						image="londonCard"
+						imageSrc="/png/londonCard.png"
 						name={city.name}
 						country={city.country}
 						flag={city.flag_url}
